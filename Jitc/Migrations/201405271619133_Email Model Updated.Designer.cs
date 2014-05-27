@@ -5,22 +5,22 @@ namespace Jitc.Migrations
     using System.Data.Entity.Migrations;
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
-
+    
     [GeneratedCode("EntityFramework.Migrations", "6.0.0-20911")]
-    public sealed partial class ChangedDefaultvalueonStatus : IMigrationMetadata
+    public sealed partial class EmailModelUpdated : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ChangedDefaultvalueonStatus));
-
+        private readonly ResourceManager Resources = new ResourceManager(typeof(EmailModelUpdated));
+        
         string IMigrationMetadata.Id
         {
-            get { return "201405270820245_Changed Default value on Status"; }
+            get { return "201405271619133_Email Model Updated"; }
         }
-
+        
         string IMigrationMetadata.Source
         {
             get { return null; }
         }
-
+        
         string IMigrationMetadata.Target
         {
             get { return Resources.GetString("Target"); }

@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Jitc.Models.Email>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MailingLists.MailingName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateToSend)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeToSend)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SendToMail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Subject)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MessageBody)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MailingLists.MailingName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateToSend)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeToSend)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SendToMail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Subject)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MessageBody)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedOn)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EmailId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EmailId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EmailId })
+        </td>
+    </tr>
+}
+
+</table>

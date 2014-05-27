@@ -1,0 +1,74 @@
+﻿@model Jitc.Models.Email
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Email</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MailingLists.MailingName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MailingLists.MailingName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateToSend)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateToSend)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeToSend)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeToSend)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SendToMail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SendToMail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subject)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subject)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MessageBody)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MessageBody)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedOn)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EmailId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

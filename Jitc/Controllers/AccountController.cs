@@ -47,7 +47,7 @@ namespace Jitc.Controllers
                 if (user != null)
                 {
                     await SignInAsync(user, model.RememberMe);
-                    return RedirectToLocal("Index,Account");
+                    return Redirect("Index,Account");
                 }
                 else
                 {

@@ -5,22 +5,22 @@ namespace Jitc.Migrations
     using System.Data.Entity.Migrations;
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
-
+    
     [GeneratedCode("EntityFramework.Migrations", "6.0.0-20911")]
-    public sealed partial class init : IMigrationMetadata
+    public sealed partial class NewModels : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(init));
-
+        private readonly ResourceManager Resources = new ResourceManager(typeof(NewModels));
+        
         string IMigrationMetadata.Id
         {
-            get { return "201312211553554_init"; }
+            get { return "201405271608532_New Models"; }
         }
-
+        
         string IMigrationMetadata.Source
         {
             get { return null; }
         }
-
+        
         string IMigrationMetadata.Target
         {
             get { return Resources.GetString("Target"); }

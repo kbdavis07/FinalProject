@@ -51,9 +51,6 @@ namespace Jitc.Models
         }
 
 
-
-
-
         public virtual ICollection<SentMail> SentMails { get; set; }
     }
 }
