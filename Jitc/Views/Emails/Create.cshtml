@@ -4,80 +4,126 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<h2>Create Email</h2>
 
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
-    <div class="form-horizontal">
-        <h4>Email</h4>
-        <hr />
+ <div class="form-horizontal well col-md-12">
+        
+    
         @Html.ValidationSummary(true)
-        <div class="form-group">
-            @Html.LabelFor(model => model.DateToSend, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.DateToSend)
-                @Html.ValidationMessageFor(model => model.DateToSend)
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.TimeToSend, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.TimeToSend)
-                @Html.ValidationMessageFor(model => model.TimeToSend)
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.MailingListId, "MailingListId", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("MailingListId", String.Empty)
-                @Html.ValidationMessageFor(model => model.MailingListId)
-            </div>
-        </div>
+        <ul class="nav nav-tabs" style="margin-bottom: 15px;">
+            <li class="active"><a href="#home" data-toggle="tab">Step 1:Email Details</a></li>
+            <li><a href="#profile" data-toggle="tab">Step 2: Write Email</a></li>
+           
+            
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.SendToMail, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.SendToMail)
-                @Html.ValidationMessageFor(model => model.SendToMail)
-            </div>
-        </div>
+            
+            
+        </ul>
+     <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade active in" id="home">
+                
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Subject, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Subject)
-                @Html.ValidationMessageFor(model => model.Subject)
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.MessageBody, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.MessageBody)
-                @Html.ValidationMessageFor(model => model.MessageBody)
-            </div>
-        </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DateToSend, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-5">
+                        @Html.EditorFor(model => model.DateToSend)
+                        @Html.ValidationMessageFor(model => model.DateToSend)
+                    </div>
+                </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.CreatedOn, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.CreatedOn)
-                @Html.ValidationMessageFor(model => model.CreatedOn)
-            </div>
-        </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TimeToSend, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-5">
+                        @Html.EditorFor(model => model.TimeToSend)
+                        @Html.ValidationMessageFor(model => model.TimeToSend)
+                    </div>
+                </div>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MailingListId, "MailingListId", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownList("MailingListId", "Select Mailing List")
+                        @Html.ValidationMessageFor(model => model.MailingListId)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SendToMail, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-5">
+                        @Html.EditorFor(model => model.SendToMail)
+                        @Html.ValidationMessageFor(model => model.SendToMail)
+                    </div>
+                </div>
+
+            
+            
             </div>
+            
+            
+         <div class="tab-pane fade" id="profile">
+
+             <!-- Large modal -->
+             <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg" data-backdrop="false">
+             Create Email</button>
+
+             <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" 
+                  aria-labelledby="myLargeModalLabel" 
+                  aria-hidden="true">
+                 
+                 <div class="modal-dialog modal-lg">
+
+                     <div class="modal-header">
+                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                         <h4 class="modal-title">Write Email</h4>
+                     </div>
+
+                     <div class="modal-content">
+
+                         <div class="modal-body">
+                             <div class="form-group">
+                                 @Html.LabelFor(model => model.Subject, htmlAttributes: new { @class = "control-label col-md-2" })
+                                 <div class="col-md-10">
+                                     @Html.EditorFor(model => model.Subject)
+                                     @Html.ValidationMessageFor(model => model.Subject)
+                                 </div>
+                             </div>
+
+                             <div class="form-group">
+                                 @Html.LabelFor(model => model.MessageBody, htmlAttributes: new { @class = "control-label col-md-2" })
+                                 <div class="col-md-10">
+                                     @Html.EditorFor(model => model.MessageBody)
+                                     @Html.ValidationMessageFor(model => model.MessageBody)
+                                 </div>
+                             </div>
+
+                         </div>
+
+                         <div class="modal-footer">
+                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                             <input type="submit" class="btn btn-primary" value="Create" />
+                         </div>
+
+                     </div>
+                         
+
+                 </div>
+             </div>
+
         </div>
-    </div>
+  </div>
+ </div>
+                     
 }
+
+<div class="clearfix"></div>
 
 <div>
     @Html.ActionLink("Back to List", "Index")

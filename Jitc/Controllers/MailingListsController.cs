@@ -17,8 +17,7 @@ namespace Jitc.Controllers
         // GET: MailingLists
         public ActionResult Index()
         {
-            var mailingLists = db.MailingLists.Include(m => m.Recipient);
-            return View(mailingLists.ToList());
+            return View(db.MailingLists.ToList());
         }
 
         // GET: MailingLists/Details/5
@@ -39,7 +38,6 @@ namespace Jitc.Controllers
         // GET: MailingLists/Create
         public ActionResult Create()
         {
-            ViewBag.MailRecipientId = new SelectList(db.MailRecipients, "MailRecipientId", "LastName");
             return View();
         }
 
@@ -48,7 +46,7 @@ namespace Jitc.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MailingListId,MailingName,MailRecipientId")] MailingList mailingList)
+        public ActionResult Create([Bind(Include = "MailingListId,MailingName")] MailingList mailingList)
         {
             if (ModelState.IsValid)
             {
@@ -57,7 +55,6 @@ namespace Jitc.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.MailRecipientId = new SelectList(db.MailRecipients, "MailRecipientId", "LastName", mailingList.MailRecipientId);
             return View(mailingList);
         }
 
@@ -73,7 +70,6 @@ namespace Jitc.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.MailRecipientId = new SelectList(db.MailRecipients, "MailRecipientId", "LastName", mailingList.MailRecipientId);
             return View(mailingList);
         }
 
@@ -82,7 +78,7 @@ namespace Jitc.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MailingListId,MailingName,MailRecipientId")] MailingList mailingList)
+        public ActionResult Edit([Bind(Include = "MailingListId,MailingName")] MailingList mailingList)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +86,6 @@ namespace Jitc.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.MailRecipientId = new SelectList(db.MailRecipients, "MailRecipientId", "LastName", mailingList.MailRecipientId);
             return View(mailingList);
         }
 
