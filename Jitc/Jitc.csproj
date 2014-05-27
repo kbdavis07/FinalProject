@@ -188,6 +188,7 @@
     <Compile Include="Models\SelectRecipientEditorViewModel.cs" />
     <Compile Include="Models\SentMail.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Subscription.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

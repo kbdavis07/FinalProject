@@ -17,5 +17,7 @@ namespace Jitc.Models
         public System.Data.Entity.DbSet<Jitc.Models.SentMail> SentMails { get; set; }
         public System.Data.Entity.DbSet<Jitc.Models.Email> Emails { get; set; }
         public System.Data.Entity.DbSet<Jitc.Models.MailingList> MailingLists { get; set; }
+        public System.Data.Entity.DbSet<Jitc.Models.Subscription> Subscriptions { get; set; }
+ 
     }
 }
