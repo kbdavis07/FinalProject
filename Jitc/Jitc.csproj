@@ -50,6 +50,13 @@
     <Reference Include="CrystalQuartz.Web">
       <HintPath>..\packages\CrystalQuartz.Simple.2.0.0.0\lib\CrystalQuartz.Web.dll</HintPath>
     </Reference>
+    <Reference Include="Elmah, Version=1.2.13605.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\elmah.1.2\lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah.Mvc">
+      <HintPath>..\packages\Elmah.MVC.2.1.1\lib\net40\Elmah.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="NVelocity">
       <HintPath>..\packages\NVelocity.1.0.3\lib\NVelocity.dll</HintPath>
@@ -201,6 +208,7 @@
     <Compile Include="Jobs\MailSender.cs" />
     <Compile Include="Jobs\SendMailJob.cs" />
     <Compile Include="Jobs\Test1.cs" />
+    <Compile Include="Jobs\XmlJob.cs" />
     <Compile Include="MailSender.cs" />
     <Compile Include="Migrations\201405280551135_Creating Database.cs" />
     <Compile Include="Migrations\201405280551135_Creating Database.Designer.cs">
@@ -320,6 +328,9 @@
     <EmbeddedResource Include="Migrations\201405280601389_Updated seed.resx">
       <DependentUpon>201405280601389_Updated seed.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\Elmah.Errors\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
