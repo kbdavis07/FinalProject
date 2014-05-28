@@ -1,6 +1,3 @@
-using Jitc.Models;
-using System.Data.Entity.Migrations;
-
 namespace Jitc.Migrations
 {
     using System;
@@ -8,64 +5,27 @@ namespace Jitc.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Jitc.Models.ApplicationDbContext>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
-
-        protected override void Seed(ApplicationDbContext context)
+        protected override void Seed(Jitc.Models.ApplicationDbContext context)
         {
-            this.AddUserAndRoles();
-        }
+            //  This method will be called after migrating to the latest version.
 
-
-        bool AddUserAndRoles()
-        {
-            bool success = false;
-
-            var idManager = new IdentityManager();
-            success = idManager.CreateRole("Admin");
-            if (!success == true) return success;
-
-            success = idManager.CreateRole("CanEdit");
-            if (!success == true) return success;
-
-            success = idManager.CreateRole("User");
-            if (!success) return success;
-
-            success = idManager.CreateRole("Test");
-            if (!success) return success;
-
-            success = idManager.CreateRole("TestII");
-            if (!success) return success;
-
-            var newUser = new ApplicationUser()
-            {
-                UserName = "Kbdavis07",
-                FirstName = "Brian",
-                LastName = "Davis",
-                Email = "Kbdavis07@yahoo.com"
-            };
-
-            // Be careful here - you  will need to use a password which will 
-            // be valid under the password rules for the application, 
-            // or the process will abort:
-            success = idManager.CreateUser(newUser, "Password1");
-            if (!success) return success;
-
-            success = idManager.AddUserToRole(newUser.Id, "Admin");
-            if (!success) return success;
-
-            success = idManager.AddUserToRole(newUser.Id, "CanEdit");
-            if (!success) return success;
-
-            success = idManager.AddUserToRole(newUser.Id, "User");
-            if (!success) return success;
-
-            return success;
+            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
+            //  to avoid creating duplicate seed data. E.g.
+            //
+            //    context.People.AddOrUpdate(
+            //      p => p.FullName,
+            //      new Person { FullName = "Andrew Peters" },
+            //      new Person { FullName = "Brice Lambson" },
+            //      new Person { FullName = "Rowan Miller" }
+            //    );
+            //
         }
     }
 }
