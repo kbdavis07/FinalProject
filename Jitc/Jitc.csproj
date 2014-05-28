@@ -60,6 +60,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -181,6 +183,18 @@
     <Compile Include="Controllers\MailRecipientsController.cs" />
     <Compile Include="Controllers\SentMailsController.cs" />
     <Compile Include="Controllers\SubscriptionsController.cs" />
+    <Compile Include="DAL\EF\QRTZ_BLOB_TRIGGERS.cs" />
+    <Compile Include="DAL\EF\QRTZ_CALENDARS.cs" />
+    <Compile Include="DAL\EF\QRTZ_CRON_TRIGGERS.cs" />
+    <Compile Include="DAL\EF\QRTZ_FIRED_TRIGGERS.cs" />
+    <Compile Include="DAL\EF\QRTZ_JOB_DETAILS.cs" />
+    <Compile Include="DAL\EF\QRTZ_LOCKS.cs" />
+    <Compile Include="DAL\EF\QRTZ_PAUSED_TRIGGER_GRPS.cs" />
+    <Compile Include="DAL\EF\QRTZ_SCHEDULER_STATE.cs" />
+    <Compile Include="DAL\EF\QRTZ_SIMPLE_TRIGGERS.cs" />
+    <Compile Include="DAL\EF\QRTZ_SIMPROP_TRIGGERS.cs" />
+    <Compile Include="DAL\EF\QRTZ_TRIGGERS.cs" />
+    <Compile Include="DAL\EF\Quartz.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
