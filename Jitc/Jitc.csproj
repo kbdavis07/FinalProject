@@ -185,20 +185,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="MailSender.cs" />
-    <Compile Include="LocalBackUpMigrations\201405271608532_New Models.cs" />
-    <Compile Include="LocalBackUpMigrations\201405271608532_New Models.Designer.cs">
-      <DependentUpon>201405271608532_New Models.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LocalBackUpMigrations\201405271619133_Email Model Updated.cs" />
-    <Compile Include="LocalBackUpMigrations\201405271619133_Email Model Updated.Designer.cs">
-      <DependentUpon>201405271619133_Email Model Updated.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LocalBackUpMigrations\201405271658065_Model changes.cs" />
-    <Compile Include="LocalBackUpMigrations\201405271658065_Model changes.Designer.cs">
-      <DependentUpon>201405271658065_Model changes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LocalBackUpMigrations\Configuration.cs" />
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Email.cs" />
@@ -293,17 +279,6 @@
     <Content Include="Views\Subscriptions\Details.cshtml" />
     <Content Include="Views\Subscriptions\Edit.cshtml" />
     <Content Include="Views\Subscriptions\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="LocalBackUpMigrations\201405271608532_New Models.resx">
-      <DependentUpon>201405271608532_New Models.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LocalBackUpMigrations\201405271619133_Email Model Updated.resx">
-      <DependentUpon>201405271619133_Email Model Updated.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LocalBackUpMigrations\201405271658065_Model changes.resx">
-      <DependentUpon>201405271658065_Model changes.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

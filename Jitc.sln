@@ -5,6 +5,20 @@ VisualStudioVersion = 12.0.30324.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jitc", "Jitc\Jitc.csproj", "{D7ADA016-6E82-4F70-B6CF-B687A3B6F6EA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Save", "Save", "{3D4C5087-07A1-4F98-B1D5-9B27A2D96D00}"
+	ProjectSection(SolutionItems) = preProject
+		Jitc\LocalBackUpMigrations\201405271608532_New Models.cs = Jitc\LocalBackUpMigrations\201405271608532_New Models.cs
+		Jitc\LocalBackUpMigrations\201405271608532_New Models.Designer.cs = Jitc\LocalBackUpMigrations\201405271608532_New Models.Designer.cs
+		Jitc\LocalBackUpMigrations\201405271608532_New Models.resx = Jitc\LocalBackUpMigrations\201405271608532_New Models.resx
+		Jitc\LocalBackUpMigrations\201405271619133_Email Model Updated.cs = Jitc\LocalBackUpMigrations\201405271619133_Email Model Updated.cs
+		Jitc\LocalBackUpMigrations\201405271619133_Email Model Updated.Designer.cs = Jitc\LocalBackUpMigrations\201405271619133_Email Model Updated.Designer.cs
+		Jitc\LocalBackUpMigrations\201405271619133_Email Model Updated.resx = Jitc\LocalBackUpMigrations\201405271619133_Email Model Updated.resx
+		Jitc\LocalBackUpMigrations\201405271658065_Model changes.cs = Jitc\LocalBackUpMigrations\201405271658065_Model changes.cs
+		Jitc\LocalBackUpMigrations\201405271658065_Model changes.Designer.cs = Jitc\LocalBackUpMigrations\201405271658065_Model changes.Designer.cs
+		Jitc\LocalBackUpMigrations\201405271658065_Model changes.resx = Jitc\LocalBackUpMigrations\201405271658065_Model changes.resx
+		Jitc\LocalBackUpMigrations\Configuration.cs = Jitc\LocalBackUpMigrations\Configuration.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
