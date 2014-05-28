@@ -68,6 +68,7 @@ namespace Jitc.Jobs
                     {
                         string schedulerError = se.ToString();
                         Elmah.ErrorSignal.FromCurrentContext().Raise(new ApplicationException(schedulerError));
+                        Elmah.ErrorSignal.FromCurrentContext().Raise(new ApplicationException("Error From XmlJob"));
                     }  
             
             

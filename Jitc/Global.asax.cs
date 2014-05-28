@@ -15,6 +15,7 @@ namespace Jitc
 {
     public class MvcApplication : System.Web.HttpApplication
     {
+        public static ISchedulerFactory Factory;
         public static IScheduler Scheduler;
 
 

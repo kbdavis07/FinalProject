@@ -37,7 +37,8 @@ namespace Jitc
         {
             public void Execute(IJobExecutionContext context)
             {
-                Console.WriteLine("Hello, CrystalQuartz!");
+                Elmah.ErrorSignal.FromCurrentContext().Raise(new ApplicationException("Hello, CrystalQuartz!"));
+               
             }
         }
     }
