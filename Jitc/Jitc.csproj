@@ -185,6 +185,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="MailSender.cs" />
+    <Compile Include="Migrations\201405280551135_Creating Database.cs" />
+    <Compile Include="Migrations\201405280551135_Creating Database.Designer.cs">
+      <DependentUpon>201405280551135_Creating Database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Email.cs" />
@@ -286,6 +291,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201405280551135_Creating Database.resx">
+      <DependentUpon>201405280551135_Creating Database.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
