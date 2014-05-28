@@ -198,6 +198,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Jobs\MailSender.cs" />
     <Compile Include="Jobs\SendMailJob.cs" />
     <Compile Include="Jobs\Test1.cs" />
     <Compile Include="MailSender.cs" />

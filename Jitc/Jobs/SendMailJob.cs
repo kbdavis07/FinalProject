@@ -17,37 +17,37 @@ namespace Jitc.Jobs
         private static readonly ILog log = LogManager.GetLogger(typeof(SendMailJob));
 
         /// <summary> The host name of the smtp server. REQUIRED.</summary>
-        public const string PropertySmtpHost = "smtp_host";
+        public const string PropertySmtpHost = "mail.bloggersonline.com";
 
         /// <summary> The port of the smtp server. Optional.</summary>
-        public const string PropertySmtpPort = "smtp_port";
+        public const string PropertySmtpPort = "587";
 
         /// <summary> Username for authenticated session. Password must also be set if username is used. Optional.</summary>
-        public const string PropertyUsername = "smtp_username";
+        public const string PropertyUsername = "Help@BloggersOnline.com";
 
         /// <summary> Password for authenticated session. Optional.</summary>
-        public const string PropertyPassword = "smtp_password";
+        public const string PropertyPassword = "bdavis28";
 
         /// <summary> The e-mail address to send the mail to. REQUIRED.</summary>
-        public const string PropertyRecipient = "recipient";
+        public const string PropertyRecipient = "Kbdavis07@yahoo.com";
 
         /// <summary> The e-mail address to cc the mail to. Optional.</summary>
         public const string PropertyCcRecipient = "cc_recipient";
 
         /// <summary> The e-mail address to claim the mail is from. REQUIRED.</summary>
-        public const string PropertySender = "sender";
+        public const string PropertySender = "Help@bloggersOnline.com";
 
         /// <summary> The e-mail address the message should say to reply to. Optional.</summary>
-        public const string PropertyReplyTo = "reply_to";
+        public const string PropertyReplyTo = "Help@bloggersOnline.com";
 
         /// <summary> The subject to place on the e-mail. REQUIRED.</summary>
-        public const string PropertySubject = "subject";
+        public const string PropertySubject = "Testing From SendMail Job";
 
         /// <summary> The e-mail message body. REQUIRED.</summary>
-        public const string PropertyMessage = "message";
+        public const string PropertyMessage = "Testing From Send Mail Job 1";
 
         /// <summary> The message subject and body content type. Optional.</summary>
-        public const string PropertyEncoding = "encoding";
+        public const string PropertyEncoding = "html";
 
         /// <summary>
         /// Executes the job.
