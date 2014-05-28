@@ -199,6 +199,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Jobs\SendMailJob.cs" />
+    <Compile Include="Jobs\Test1.cs" />
     <Compile Include="MailSender.cs" />
     <Compile Include="Migrations\201405280551135_Creating Database.cs" />
     <Compile Include="Migrations\201405280551135_Creating Database.Designer.cs">

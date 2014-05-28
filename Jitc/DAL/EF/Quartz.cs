@@ -54,6 +54,11 @@ namespace Jitc.DAL.EF
                 .HasOptional(e => e.QRTZ_SIMPROP_TRIGGERS)
                 .WithRequired(e => e.QRTZ_TRIGGERS)
                 .WillCascadeOnDelete();
+
+            //modelBuilder.Entity<QRTZ_TRIGGERS>()
+            //    .HasOptional(f => f.QRTZ_CRON_TRIGGERS).WithMany()
+            //    .HasForeignKey(f => new { f.SCHED_NAME, f.JOB_NAME, f.JOB_GROUP });
+
         }
     }
 }
