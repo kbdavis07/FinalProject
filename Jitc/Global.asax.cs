@@ -29,20 +29,18 @@ namespace Jitc
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            try
-            {
+           
                 ISchedulerFactory sf = new StdSchedulerFactory();
                 Scheduler = sf.GetScheduler();
 
                 Scheduler.Start();
                 Elmah.ErrorSignal.FromCurrentContext().Raise(new ApplicationException("Scheduler Started Successfully"));
-            }
+          
 
-            catch (SchedulerException se)
-            {
-               string schedulerError = se.ToString();
-               Elmah.ErrorSignal.FromCurrentContext().Raise(new ApplicationException(schedulerError));
-            }
+          
+               //string schedulerError = se.ToString();
+               //Elmah.ErrorSignal.FromCurrentContext().Raise(new ApplicationException(schedulerError));
+           
         
         
         }

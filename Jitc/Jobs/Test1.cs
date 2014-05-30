@@ -38,7 +38,7 @@ namespace Jitc.Jobs
             Elmah.ErrorSignal.FromCurrentContext().Raise(new ApplicationException("------- Scheduling Job  -------------------"));
 
             // define the job and tie it to our HelloJob class
-            IJobDetail job = JobBuilder.Create<Jitc.SimpleSchedulerProvider.HelloJob>()
+            IJobDetail job = JobBuilder.Create<XmlJob>()
                 .WithIdentity("job1", "group1")
                 .Build();
 

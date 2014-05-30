@@ -12,6 +12,7 @@ using System.Web.Mvc;
 using Jitc.Models;
 using Jitc.Controllers;
 using System.Xml.Linq;
+using System.IO;
 
 
 namespace Jitc.Jobs
@@ -32,9 +33,12 @@ namespace Jitc.Jobs
                      
                      //XmlTextWriter xmlwriter = new XmlTextWriter(HttpContext.Server.MapPath("~/App_Data/Employee.xml"), Encoding.UTF8);
 
-                        var billingData = XDocument.Load(HttpContext.Current.Server.MapPath("~/App_Data/Employee.xml"));
+                        var file = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"App_Data\Employee.xml");
 
 
+                        var billingData = XDocument.Load(file);
+
+                        
                         billingData.Root.Add(new XElement("item", new XElement("id", "ID"),
 
                             new XElement("customer", "Customer"),
@@ -42,7 +46,7 @@ namespace Jitc.Jobs
                             new XElement("hours", "5")));
 
 
-                        billingData.Save(HttpContext.Current.Server.MapPath("~/App_Data/Billings.xml"));
+                        billingData.Save(file);
 
 
                         //xmlwriter.Formatting = Formatting.Indented;

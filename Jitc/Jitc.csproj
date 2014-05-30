@@ -44,12 +44,6 @@
     <Reference Include="Common.Logging">
       <HintPath>..\packages\Common.Logging.2.1.2\lib\net40\Common.Logging.dll</HintPath>
     </Reference>
-    <Reference Include="CrystalQuartz.Core">
-      <HintPath>..\packages\CrystalQuartz.Simple.2.0.0.0\lib\CrystalQuartz.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="CrystalQuartz.Web">
-      <HintPath>..\packages\CrystalQuartz.Simple.2.0.0.0\lib\CrystalQuartz.Web.dll</HintPath>
-    </Reference>
     <Reference Include="Elmah, Version=1.2.13605.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\elmah.1.2\lib\Elmah.dll</HintPath>
@@ -222,7 +216,9 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\Email.cs" />
+    <Compile Include="Models\EmailActivitiesLog.cs" />
     <Compile Include="Models\MailingList.cs" />
     <Compile Include="Models\MailRecipient.cs" />
     <Compile Include="Models\MailRecipientsViewModel.cs" />
@@ -232,7 +228,6 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Subscription.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SimpleSchedulerProvider.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -240,6 +235,7 @@
     <Content Include="App_Data\DefaultConnection2_log.ldf">
       <DependentUpon>DefaultConnection2.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Data\Employee.xml" />
     <Content Include="Content\ajax-loader.gif" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="favicon.ico" />
@@ -251,7 +247,6 @@
     <None Include="job_scheduling_data_2_0.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="quartz.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
